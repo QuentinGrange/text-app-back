@@ -1,5 +1,5 @@
 from rest_framework import viewsets, filters
-from rest_framework.permissions import IsAuthenticated
+from rest_framework.permissions import IsAuthenticated, AllowAny
 
 from django_filters.rest_framework import DjangoFilterBackend
 
@@ -10,7 +10,7 @@ from api.filters import ConversationFilter
 
 
 class ConversationViewSet(viewsets.ModelViewSet):
-    permission_classes = (IsAuthenticated,)
+    permission_classes = (AllowAny,)
     serializer_class = ConversationSerializer
     queryset = Conversation.objects.all()
     search_fields = ('name',)

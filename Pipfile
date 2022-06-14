@@ -8,6 +8,11 @@ django = "*"
 djangorestframework = "*"
 django-filter = "*"
 djangorestframework-simplejwt = "*"
+channels = "*"
+channels-redis = "*"
+django-cors-headers = "*"
+install = "*"
+drf-flex-fields = "*"
 
 [dev-packages]
 

@@ -10,3 +10,4 @@ class Message(models.Model):
                           editable=False)
     text = models.TextField(verbose_name='Text')
     user = models.ForeignKey(get_user_model(), related_name='messages', on_delete=models.CASCADE)
+    conversation = models.ForeignKey('api.Conversation', related_name='messages', on_delete=models.CASCADE, null=True)
