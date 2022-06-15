@@ -10,7 +10,6 @@ from api.models.message import Message
 from api.serializers.user import UserSerializer
 
 
-
 class ChatConsumer(WebsocketConsumer):
     def connect(self):
         self.conversation_id = self.scope['url_route']['kwargs']['conversation_id']
