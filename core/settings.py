@@ -139,6 +139,7 @@ REST_FRAMEWORK = {
     ],
 }
 
+
 ASGI_APPLICATION = 'core.asgi.application'
 CHANNEL_LAYERS = {
     'default': {
