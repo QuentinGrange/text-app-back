@@ -13,7 +13,7 @@ class ConversationViewSet(viewsets.ModelViewSet):
     permission_classes = (AllowAny,)
     serializer_class = ConversationSerializer
     queryset = Conversation.objects.all()
-    search_fields = ('name',)
+    search_fields = ('first_name', 'last_name', 'username')
     ordering_fields = ('id',)
     ordering = ('id',)
     filter_backends = [filters.SearchFilter, DjangoFilterBackend, ]

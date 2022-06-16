@@ -8,6 +8,7 @@ from rest_framework.permissions import IsAuthenticated, AllowAny
 from django_filters.rest_framework import DjangoFilterBackend
 
 from api.serializers.user import UserSerializer, RegisterSerializer
+from api.filters import UserFilter
 
 
 class RegisterViewSet(generics.GenericAPIView):
@@ -36,4 +37,5 @@ class UserAPIView(viewsets.ModelViewSet):
     ordering_fields = ('id',)
     ordering = ('id',)
     filter_backends = [filters.SearchFilter, DjangoFilterBackend, ]
+    filter_class = UserFilter
 
